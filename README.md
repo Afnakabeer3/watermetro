@@ -18,5 +18,5 @@ The app fetches data from JSON APIs and displays **News updates** and **Terminal
 Clone the repo and open `index.html` in your browser:
 ```bash
 git clone https://github.com/Afnakabeer3/watermetro-app.git
-cd watermetro-app
+cd watermetro
 open index.html   # or double-click in file explorer
