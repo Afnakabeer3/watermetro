@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WaterMetro Sea Travel</title>
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1><i class="fa-solid fa-ship"></i> WaterMetro</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#terminals">Terminals</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#booking">Booking</a></li>
+      </ul>
+    </nav>
+    <button class="toggle-btn" onclick="toggleMode()"><i class="fa-solid fa-moon"></i> Theme</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h2>Smooth Sailing Across Kochi</h2>
+    <p>Fast • Eco-Friendly • Digital Payment • Affordable</p>
+  </section>
+
+  <!-- Terminals -->
+  <section id="terminals">
+    <h3><i class="fa-solid fa-location-dot"></i> Our Terminals</h3>
+    <p>Explore key boarding points across Kochi.</p>
+    <div class="terminals" id="terminalList"></div>
+  </section>
+
+  <!-- News -->
+  <section id="news">
+    <h3><i class="fa-solid fa-newspaper"></i> Latest News</h3>
+    <p>Stay updated with WaterMetro announcements.</p>
+    <div class="news-list" id="newsList"></div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking">
+    <h3><i class="fa-solid fa-ticket"></i> Book Your Ride</h3>
+    <p>Plan your journey with ease.</p>
+    <form class="booking-form" onsubmit="submitBooking(event)">
+      <label for="source">Source Terminal</label>
+      <select id="source" required></select>
+
+      <label for="destination">Destination Terminal</label>
+      <select id="destination" required></select>
+
+      <label for="date">Travel Date</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Select Time Slot</label>
+      <select id="time" required>
+        <option value="">-- Select Time Slot --</option>
+        <option>Morning (06:00 - 10:00)</option>
+        <option>Afternoon (10:00 - 14:00)</option>
+        <option>Evening (14:00 - 19:00)</option>
+        <option>Night (19:00 - 23:00)</option>
+      </select>
+
+      <label for="passengers">No. of Passengers</label>
+      <input type="number" id="passengers" min="1" max="10" required>
+
+      <button type="submit"><i class="fa-solid fa-credit-card"></i> Proceed to Payment</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 WaterMetro • Smooth Sailing Across Kochi</p>
+  </footer>
+
+  <!-- Link to JS -->
+  <script src="script.js"></script>
+</body>
+</html>

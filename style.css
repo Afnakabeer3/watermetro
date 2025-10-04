@@ -1,0 +1,62 @@
+/* ===== Reset & Base Styles ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
+body { background: #f8f9fa; color: #222; transition: background 0.4s, color 0.4s; }
+body.dark { background: #111; color: #eee; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ===== Animations ===== */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);} }
+@keyframes fadeIn { from { opacity: 0;} to { opacity: 1;} }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-50px);} to { opacity: 1; transform: translateX(0);} }
+
+/* ===== Header ===== */
+header { background: #004b70; color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; animation: slideIn 1s ease-in-out; }
+header h1 { font-size: 1.8rem; font-weight: bold; }
+nav ul { display: flex; gap: 1.5rem; }
+nav a { color: white; font-weight: 500; transition: color 0.3s; }
+nav a:hover { color: #ffd166; }
+
+/* ===== Dark Mode Toggle ===== */
+.toggle-btn { background: #ffd166; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold; transition: background 0.3s, transform 0.3s; }
+.toggle-btn:hover { background: #fca311; transform: scale(1.1); }
+
+/* ===== Hero Section ===== */
+.hero { background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover; color: white; text-align: center; padding: 6rem 1rem; animation: fadeIn 2s ease-in-out; }
+.hero h2 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.6); }
+.hero p { font-size: 1.2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+
+/* ===== Sections ===== */
+section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+section h3 { font-size: 2rem; margin-bottom: 1rem; color: #004b70; text-align: center; animation: fadeInUp 1s ease-in-out; }
+section p { text-align: center; margin-bottom: 2rem; color: #555; animation: fadeIn 1.5s ease-in-out; }
+body.dark section h3 { color: #ffd166; }
+body.dark section p { color: #ccc; }
+
+/* ===== Terminals Grid ===== */
+.terminals { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.terminal-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; animation: fadeInUp 1s ease-in-out; text-align: center; }
+.terminal-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
+.terminal-card i { font-size: 2rem; margin-bottom: 0.5rem; color: #004b70; }
+body.dark .terminal-card { background: #222; color: #eee; }
+body.dark .terminal-card i { color: #ffd166; }
+
+/* ===== News Section ===== */
+.news-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.news-item { background: white; padding: 1.5rem; border-left: 5px solid #004b70; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); animation: fadeInUp 1s ease-in-out; transition: transform 0.3s, box-shadow 0.3s; }
+.news-item:hover { transform: scale(1.02); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
+body.dark .news-item { background: #222; border-left: 5px solid #ffd166; }
+.news-item h4 { color: #004b70; margin-bottom: 0.5rem; }
+body.dark .news-item h4 { color: #ffd166; }
+
+/* ===== Booking Form ===== */
+.booking-form { max-width: 600px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); animation: fadeInUp 1.5s ease-in-out; }
+body.dark .booking-form { background: #222; }
+.booking-form label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+.booking-form select, .booking-form input { width: 100%; padding: 0.7rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 6px; }
+body.dark .booking-form select, body.dark .booking-form input { background: #333; color: #eee; border: 1px solid #555; }
+.booking-form button { background: #004b70; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer; transition: background 0.3s, transform 0.3s; }
+.booking-form button:hover { background: #0077b6; transform: scale(1.05); }
+
+/* ===== Footer ===== */
+footer { background: #004b70; color: white; text-align: center; padding: 2rem 1rem; margin-top: 3rem; animation: fadeIn 2s ease-in-out; }
